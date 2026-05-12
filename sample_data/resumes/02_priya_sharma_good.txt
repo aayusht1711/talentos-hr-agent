@@ -1,0 +1,41 @@
+PRIYA SHARMA
+priya.sharma@gmail.com | Hyderabad, India
+github.com/priyasharma-ml
+
+SUMMARY
+ML Engineer with 5 years of experience in building ML models for classification, NLP, and time-series forecasting. Comfortable working with PyTorch and cloud platforms. Currently transitioning from data science to ML engineering with hands-on experience in Docker-based deployments.
+
+TECHNICAL SKILLS
+Languages: Python (5 years), SQL, R (basic)
+ML/DL: PyTorch, Scikit-learn, Keras, HuggingFace Transformers, NLTK, spaCy
+Data Engineering: Pandas, PySpark (intermediate), Airflow
+Cloud: AWS (EC2, S3, SageMaker basics), GCP basics
+DevOps: Docker, Git, GitHub Actions (basic)
+Databases: PostgreSQL, MongoDB
+Monitoring: basic Grafana dashboards
+
+EXPERIENCE
+
+ML Engineer | Infosys AI Lab | Hyderabad | Mar 2022 – Present (2 years)
+- Built a text classification pipeline using BERT fine-tuning for customer support ticket routing; reduced manual triage by 60%
+- Deployed 3 models to production using Docker + AWS EC2; wrote basic CI/CD pipeline with GitHub Actions
+- Collaborated with data science team on feature engineering for churn prediction model
+
+Data Scientist | Hexaware Technologies | Pune | Aug 2019 – Feb 2022 (2.5 years)
+- Developed demand forecasting models (ARIMA, Prophet, LSTM) for a retail client
+- Created Airflow DAGs for automated data pipelines
+- Built interactive dashboards for business stakeholders using Tableau
+
+EDUCATION
+B.Tech in Information Technology | JNTU Hyderabad | 2019
+
+CERTIFICATIONS
+- AWS Cloud Practitioner (2022)
+- TensorFlow Developer Certificate – Google (2021)
+
+PROJECTS
+- Customer Sentiment Analysis: Fine-tuned RoBERTa on 50K product reviews achieving F1 of 0.87
+- Time Series Anomaly Detection: Built LSTM autoencoder for IoT sensor data
+- Open source contribution: Minor PRs to scikit-learn documentation
+
+NOTE: Have been studying Kubernetes and MLflow in the past 3 months, completing an MLOps specialisation course on Coursera.

@@ -1,0 +1,41 @@
+Job Title: Senior Machine Learning Engineer
+
+Company: DataSphere AI (Series B, 120 employees)
+Location: Remote / Bangalore
+Department: AI/ML Platform
+
+About the Role:
+We are looking for a Senior Machine Learning Engineer to join our core AI platform team. You will design, build, and productionize ML systems that power our real-time recommendation and fraud detection products. You will work closely with data scientists to move models from experimentation to production at scale.
+
+Required Skills:
+- Python (advanced) — 5+ years
+- Machine Learning: supervised and unsupervised learning, neural networks
+- Deep Learning frameworks: PyTorch or TensorFlow
+- MLOps: model deployment, monitoring, drift detection
+- Distributed computing: Spark or Dask
+- Cloud platforms: AWS or GCP
+- SQL and data pipelines
+- Docker and Kubernetes
+- Git, CI/CD practices
+
+Preferred Skills:
+- Experience with LLMs and transformer models (fine-tuning, inference optimisation)
+- Feature stores (Feast, Tecton)
+- Familiarity with A/B testing frameworks
+- Experience with streaming data (Kafka, Kinesis)
+- Publication or open-source contributions in ML
+
+Minimum Experience: 5 years total, with at least 3 years in ML engineering specifically
+Education: Bachelor's in Computer Science, Statistics, Mathematics, or equivalent. Master's preferred.
+Certifications: AWS Certified Machine Learning – Specialty is a plus
+
+Key Responsibilities:
+- Design and deploy scalable ML pipelines for recommendation and fraud detection models
+- Collaborate with data scientists to productionise experimental models
+- Build monitoring and alerting for model health in production
+- Optimise model inference latency for real-time serving (<50ms P99)
+- Mentor junior engineers and review code across the ML platform team
+- Participate in on-call rotation for production ML systems
+
+Domain: Machine Learning / MLOps
+Seniority Level: Senior

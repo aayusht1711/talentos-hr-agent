@@ -1,0 +1,44 @@
+ARJUN MEHTA
+arjun.mehta@email.com | LinkedIn: linkedin.com/in/arjunmehta | GitHub: github.com/arjunmehta
+Bangalore, India | +91-9876543210
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 7 years of experience building and deploying large-scale ML systems across recommendation, NLP, and fraud detection domains. Deep expertise in PyTorch, MLOps pipelines, and AWS. Passionate about bridging the gap between research and production systems. Contributed to 3 open-source ML projects with 1.2k+ GitHub stars combined.
+
+SKILLS
+Python, PyTorch, TensorFlow, Scikit-learn, XGBoost, MLflow, Kubeflow, Apache Spark, Kafka, AWS (SageMaker, ECS, S3, Kinesis), GCP (Vertex AI), Docker, Kubernetes, Feast (feature store), SQL, Airflow, Redis, FastAPI, Transformers (HuggingFace), ONNX, Triton Inference Server, Git, CI/CD (GitHub Actions), A/B testing, Prometheus, Grafana
+
+WORK EXPERIENCE
+
+Senior ML Engineer | Flipkart | Bangalore | Jan 2021 – Present (3.5 years)
+- Designed and deployed a real-time product recommendation system serving 40M+ daily active users with <30ms P99 latency using PyTorch + Triton Inference Server on AWS
+- Built an MLOps platform on Kubeflow handling 200+ model versions with automated drift detection and retraining triggers
+- Led fine-tuning of a BERT-based model for product search ranking — improved NDCG@10 by 18%
+- Established feature store using Feast integrated with Kafka for real-time feature serving
+- Mentored a team of 4 junior ML engineers; conducted weekly ML reading groups
+
+ML Engineer | Razorpay | Bangalore | Jun 2018 – Dec 2020 (2.5 years)
+- Built fraud detection models (XGBoost + LSTM ensemble) reducing false positive rate by 35% while maintaining 99.2% recall
+- Productionised 12 ML models from data science team, establishing internal ML deployment standards
+- Implemented model monitoring dashboards using Prometheus + Grafana
+
+Junior Data Scientist | Mu Sigma | Bangalore | Jul 2016 – May 2018 (2 years)
+- Built customer churn prediction models for a Fortune 500 telecom client using Spark MLlib
+- Created automated EDA pipelines saving 15 hours/week of analyst time
+
+EDUCATION
+M.Tech in Computer Science (specialisation: Machine Learning) | IIT Bangalore | 2016
+B.Tech in Computer Science | NIT Trichy | 2014
+
+CERTIFICATIONS
+- AWS Certified Machine Learning – Specialty (2022)
+- Google Professional ML Engineer (2021)
+- Deep Learning Specialisation – Coursera / Andrew Ng (2019)
+
+PROJECTS / OPEN SOURCE
+- mlflow-feast-connector: Open-source connector syncing Feast feature metadata to MLflow experiments (480+ GitHub stars)
+- pytorch-drift-monitor: Lightweight drift detection library for PyTorch models in production (320+ stars)
+- Published paper: "Efficient Online Feature Serving for Real-Time Recommendation" — ECML-PKDD 2022
+
+PUBLICATIONS
+- "Efficient Online Feature Serving for Real-Time Recommendation" — ECML-PKDD 2022

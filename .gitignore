@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+outputs/
+*.log
+.DS_Store
+*.html
+*.json
+!sample_data/

@@ -1,0 +1,38 @@
+RAVI KRISHNAN
+ravi.k@outlook.com | Chennai, India
+
+ABOUT ME
+Data Scientist with 6 years of experience in statistical modelling, data analysis, and building predictive models for business problems. I work primarily in Python and R, and have presented insights to C-suite stakeholders. Looking to explore ML engineering roles.
+
+SKILLS
+Python, R, SQL, Excel, Tableau, Power BI
+Machine Learning: Linear/Logistic Regression, Random Forest, Gradient Boosting, K-Means
+Statistics: A/B testing, hypothesis testing, survival analysis
+Data Visualisation: Matplotlib, Seaborn, Tableau
+
+WORK HISTORY
+
+Senior Data Scientist | HDFC Bank | Chennai | Apr 2020 – Present (4 years)
+- Built credit risk scoring models (Logistic Regression, XGBoost) deployed by the engineering team
+- Designed and analysed 30+ A/B tests for digital product features
+- Created automated weekly reporting dashboards for the analytics leadership team
+- Mentored 2 junior analysts
+
+Data Analyst | Cognizant | Chennai | Jun 2018 – Mar 2020 (2 years)
+- Performed customer segmentation using K-Means clustering for a US insurance client
+- Built revenue forecasting models for quarterly planning
+
+EDUCATION
+M.Sc. in Statistics | Madras University | 2018
+B.Sc. in Mathematics | Loyola College Chennai | 2016
+
+CERTIFICATIONS
+- Google Data Analytics Certificate (Coursera) – 2021
+- IBM Data Science Professional Certificate – 2020
+
+PROJECTS
+- Home loan default prediction: Built XGBoost model achieving AUC 0.84
+- Customer lifetime value modelling for HDFC retail banking segment
+- No GitHub / public portfolio
+
+NOTE: I have not worked with Docker, Kubernetes, Spark, or cloud ML services. My models have always been handed off to the engineering team for deployment.

@@ -1,0 +1,38 @@
+SNEHA PATEL
+sneha.patel@email.com | Mumbai, India
+
+PROFILE
+Full-Stack Software Engineer with 5 years of experience in backend development using Python and Java. Recently completed a deep learning course and built a few personal ML projects. Looking to pivot into ML engineering.
+
+TECHNICAL SKILLS
+Languages: Python, Java, JavaScript, SQL
+Backend: Django, FastAPI, Spring Boot
+Databases: MySQL, Redis, Cassandra
+DevOps: Docker, Kubernetes, Jenkins, AWS (EC2, S3, Lambda)
+ML (learning): NumPy, Pandas, Scikit-learn, basic PyTorch tutorials
+
+EXPERIENCE
+
+Senior Software Engineer | TCS | Mumbai | Aug 2021 – Present (3 years)
+- Built high-throughput REST APIs in FastAPI serving 10M+ requests/day
+- Designed a distributed task queue using Celery + Redis for async processing
+- Containerised 15 microservices using Docker/Kubernetes on AWS EKS
+- Implemented CI/CD pipelines using Jenkins + GitHub Actions
+
+Software Engineer | Wipro | Pune | Jun 2019 – Jul 2021 (2 years)
+- Developed RESTful APIs for a banking client using Spring Boot
+- Optimised SQL queries reducing report generation time from 45s to 3s
+
+EDUCATION
+B.Tech in Computer Science | BITS Pilani Goa | 2019
+
+CERTIFICATIONS
+- AWS Solutions Architect – Associate (2022)
+- Kubernetes Administrator (CKA) – 2023
+
+PERSONAL ML PROJECTS (self-learning)
+- Image classifier: Built a CNN using PyTorch on CIFAR-10, achieved 87% accuracy (tutorial-guided)
+- Spam classifier: Logistic Regression + TF-IDF on email dataset, 94% accuracy
+- Following fast.ai course; no production ML deployment experience yet
+
+NOTE: I have strong engineering fundamentals and infrastructure skills but limited ML depth. Enthusiastic to learn but currently at beginner level in ML.
