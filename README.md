@@ -284,5 +284,5 @@ Tested against Senior ML Engineer JD with 5 diverse resumes:
 - **UI:** Streamlit 1.38+
 
 ---
-
+github.com/your-repo  →  github.com/aayusht1711/talentos-hr-agent
 
