@@ -285,4 +285,4 @@ Tested against Senior ML Engineer JD with 5 diverse resumes:
 
 ---
 
-*Built for the AI Enablement Internship — Task 1: HR Resume & LinkedIn Shortlisting Agent*
+
