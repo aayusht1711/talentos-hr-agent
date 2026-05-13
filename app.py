@@ -35,6 +35,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from dotenv import load_dotenv
 load_dotenv()
 
+
 from agents.jd_parser import parse_jd
 from agents.profile_parser import parse_profile
 from agents.scoring_engine import score_candidate
@@ -327,6 +328,9 @@ with st.sidebar:
         value=os.environ.get("GROQ_API_KEY",""), placeholder="gsk_...",
         help="Free at console.groq.com")
     if groq_key: os.environ["GROQ_API_KEY"] = groq_key
+    # Also check Streamlit Cloud secrets
+if not os.environ.get("GROQ_API_KEY") and hasattr(st, 'secrets') and 'GROQ_API_KEY' in st.secrets:
+    os.environ['GROQ_API_KEY'] = st.secrets['GROQ_API_KEY']
 
     ls_key = st.text_input("LangSmith key", type="password",
         value=os.environ.get("LANGCHAIN_API_KEY",""), placeholder="Optional — tracing")
