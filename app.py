@@ -35,7 +35,6 @@ sys.path.insert(0, str(Path(__file__).parent))
 from dotenv import load_dotenv
 load_dotenv()
 
-
 from agents.jd_parser import parse_jd
 from agents.profile_parser import parse_profile
 from agents.scoring_engine import score_candidate
@@ -123,13 +122,41 @@ code{background:#161b22!important;color:#4f9cf9!important;border:1px solid #3036
   color:#484f58!important}
 
 /* ── FILE UPLOADER ── */
-[data-testid="stFileUploader"],[data-testid="stFileUploaderDropzone"],
-[data-testid="stFileUploader"] section,[data-testid="stFileUploader"]>div{
-  background:#161b22!important;border-radius:10px!important}
-[data-testid="stFileUploader"] *{color:#8b949e!important}
+[data-testid="stFileUploader"]{
+    background:#161b22!important;
+    border-radius:10px!important;
+}
+
 [data-testid="stFileUploaderDropzone"]{
-  border:1.5px dashed #30363d!important;border-radius:10px!important;background:#161b22!important}
-[data-testid="stFileUploaderDropzone"]:hover{border-color:#4f9cf9!important}
+    border:1.5px dashed #30363d!important;
+    border-radius:10px!important;
+    background:#161b22!important;
+    padding:18px!important;
+}
+
+[data-testid="stFileUploaderDropzone"]:hover{
+    border-color:#4f9cf9!important;
+}
+
+/* FIX uploadUpload overlap */
+[data-testid="stFileUploader"] button{
+    background:#0d1117!important;
+    border:1px solid #30363d!important;
+    color:#c9d1d9!important;
+    border-radius:8px!important;
+    padding:8px 14px!important;
+    font-size:13px!important;
+    white-space:nowrap!important;
+    overflow:hidden!important;
+}
+
+/* remove duplicate text */
+[data-testid="stFileUploader"] small{
+    display:inline-block!important;
+    margin-left:10px!important;
+    color:#8b949e!important;
+    font-size:12px!important;
+}
 
 /* ── BUTTONS ── */
 .stButton>button{
@@ -154,16 +181,42 @@ code{background:#161b22!important;color:#4f9cf9!important;border:1px solid #3036
 
 /* ── EXPANDER ── */
 [data-testid="stExpander"]{
-  background:#161b22!important;border:1px solid #21262d!important;
-  border-radius:12px!important;margin-bottom:6px!important;box-shadow:none!important;overflow:hidden!important}
-[data-testid="stExpander"] summary svg,[data-testid="stExpander"] summary span[data-testid="StyledFullScreenButton"]{display:none!important}
+    background:#161b22!important;
+    border:1px solid #21262d!important;
+    border-radius:12px!important;
+    margin-bottom:10px!important;
+    overflow:hidden!important;
+}
+
 [data-testid="stExpander"] summary{
-  background:#161b22!important;color:#e2eaf4!important;
-  font-size:13px!important;font-weight:500!important;padding:12px 16px!important}
-[data-testid="stExpander"] summary:hover{background:#21262d!important}
-[data-testid="stExpander"]>details[open]>summary{border-bottom:1px solid #21262d!important}
-[data-testid="stExpander"]>details>div,.streamlit-expanderContent{
-  background:#0d1117!important;padding:14px 16px!important}
+    padding:14px 18px!important;
+    font-size:13px!important;
+    color:#e2eaf4!important;
+    background:#161b22!important;
+    cursor:pointer!important;
+    list-style:none!important;
+}
+
+/* FIX arrow overlap */
+[data-testid="stExpander"] summary::-webkit-details-marker{
+    display:none!important;
+}
+
+[data-testid="stExpander"] details summary::before{
+    content:"▶";
+    color:#8b949e!important;
+    margin-right:10px!important;
+    font-size:11px!important;
+}
+
+[data-testid="stExpander"] details[open] summary::before{
+    content:"▼";
+}
+
+[data-testid="stExpander"] > details > div{
+    padding:14px 18px!important;
+    background:#0d1117!important;
+}
 
 /* ── ALERTS ── */
 [data-testid="stAlert"]{border-radius:8px!important;font-size:13px!important;border-left-width:3px!important}
@@ -328,9 +381,6 @@ with st.sidebar:
         value=os.environ.get("GROQ_API_KEY",""), placeholder="gsk_...",
         help="Free at console.groq.com")
     if groq_key: os.environ["GROQ_API_KEY"] = groq_key
-    # Also check Streamlit Cloud secrets
-if not os.environ.get("GROQ_API_KEY") and hasattr(st, 'secrets') and 'GROQ_API_KEY' in st.secrets:
-    os.environ['GROQ_API_KEY'] = st.secrets['GROQ_API_KEY']
 
     ls_key = st.text_input("LangSmith key", type="password",
         value=os.environ.get("LANGCHAIN_API_KEY",""), placeholder="Optional — tracing")
