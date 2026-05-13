@@ -132,31 +132,79 @@ code{background:#161b22!important;color:#4f9cf9!important;border:1px solid #3036
     border-radius:10px!important;
     background:#161b22!important;
     padding:18px!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:12px!important;
 }
 
 [data-testid="stFileUploaderDropzone"]:hover{
     border-color:#4f9cf9!important;
 }
 
-/* FIX uploadUpload overlap */
+/* FIX uploadUpload */
+[data-testid="stFileUploader"] section button p{
+    display:none!important;
+}
+
+[data-testid="stFileUploader"] section button::after{
+    content:"Upload";
+    color:#c9d1d9!important;
+    font-size:13px!important;
+    font-weight:500!important;
+}
+
 [data-testid="stFileUploader"] button{
     background:#0d1117!important;
     border:1px solid #30363d!important;
-    color:#c9d1d9!important;
     border-radius:8px!important;
-    padding:8px 14px!important;
-    font-size:13px!important;
-    white-space:nowrap!important;
-    overflow:hidden!important;
+    padding:8px 16px!important;
+    min-height:40px!important;
 }
 
-/* remove duplicate text */
 [data-testid="stFileUploader"] small{
-    display:inline-block!important;
-    margin-left:10px!important;
     color:#8b949e!important;
     font-size:12px!important;
 }
+
+
+/* ───────── REAL uploadUpload FIX ───────── */
+
+[data-testid="stFileUploader"] button{
+    font-size:0 !important;
+    color:transparent !important;
+}
+
+/* hide ALL internal upload text */
+[data-testid="stFileUploader"] button *{
+    display:none !important;
+}
+
+/* create clean single Upload text */
+[data-testid="stFileUploader"] button::after{
+    content:"Upload";
+    font-size:14px !important;
+    color:#e6edf3 !important;
+    font-weight:500 !important;
+    display:block !important;
+    line-height:1 !important;
+}
+
+/* button style */
+[data-testid="stFileUploader"] button{
+    background:#0d1117 !important;
+    border:1px solid #30363d !important;
+    border-radius:8px !important;
+    min-height:42px !important;
+    padding:8px 18px !important;
+}
+
+/* uploader box */
+[data-testid="stFileUploaderDropzone"]{
+    display:flex !important;
+    align-items:center !important;
+    gap:14px !important;
+}
+
 
 /* ── BUTTONS ── */
 .stButton>button{
@@ -189,7 +237,7 @@ code{background:#161b22!important;color:#4f9cf9!important;border:1px solid #3036
 }
 
 [data-testid="stExpander"] summary{
-    padding:14px 18px!important;
+    padding:14px 18px 14px 42px!important;
     font-size:13px!important;
     color:#e2eaf4!important;
     background:#161b22!important;
@@ -202,14 +250,16 @@ code{background:#161b22!important;color:#4f9cf9!important;border:1px solid #3036
     display:none!important;
 }
 
-[data-testid="stExpander"] details summary::before{
+[data-testid="stExpander"] summary::before{
     content:"▶";
+    position:absolute!important;
+    left:16px!important;
+    top:14px!important;
     color:#8b949e!important;
-    margin-right:10px!important;
     font-size:11px!important;
 }
 
-[data-testid="stExpander"] details[open] summary::before{
+[data-testid="stExpander"][open] summary::before{
     content:"▼";
 }
 
@@ -440,8 +490,12 @@ with col1:
                         key="jd_mode", label_visibility="collapsed")
     jd_text = ""
     if jd_mode == "Upload file":
-        jd_file = st.file_uploader("", type=["pdf","docx","txt"],
-                                    key="jd_file", label_visibility="collapsed")
+        jd_file = st.file_uploader(
+            "",
+            type=["pdf","docx","txt"],
+            key="jd_file",
+            label_visibility="collapsed"
+        )
         if jd_file:
             jd_text = extract_text_from_file(jd_file.read(), jd_file.name)
             if jd_text: st.success(f"✓ {jd_file.name} — {len(jd_text):,} characters")
@@ -468,10 +522,20 @@ with col1:
 
 with col2:
     st.markdown('<div style="font-size:13px;font-weight:500;color:#e2eaf4;margin-bottom:10px">Candidate profiles</div>', unsafe_allow_html=True)
-    resume_files   = st.file_uploader("Resumes (PDF, DOCX, TXT)", type=["pdf","docx","txt"],
-                                       accept_multiple_files=True, key="resumes")
-    linkedin_files = st.file_uploader("LinkedIn exports (JSON)", type=["json"],
-                                       accept_multiple_files=True, key="linkedin")
+    resume_files = st.file_uploader(
+        "",
+        type=["pdf","docx","txt"],
+        accept_multiple_files=True,
+        key="resumes",
+        label_visibility="collapsed"
+    )
+    linkedin_files = st.file_uploader(
+        "",
+        type=["json"],
+        accept_multiple_files=True,
+        key="linkedin",
+        label_visibility="collapsed"
+    )
     if st.button("Load 5 sample resumes", use_container_width=True, key="load_res"):
         d = Path(__file__).parent / "sample_data" / "resumes"
         if d.exists():
